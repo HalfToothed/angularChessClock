@@ -104,7 +104,7 @@ body {
   }
   
   
-  @media (max-width: 490px) {
+  @media (max-width: 700px) {
     
     .timer-container {
       flex-direction: column;
