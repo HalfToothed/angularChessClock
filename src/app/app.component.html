@@ -6,7 +6,7 @@
       </div>
       <div class="timer-container">
           <div (click)="startAndStopClock(true)" class="white-timer">
-              <h2>{{ whitePlayer?.minutes | number: '2.0' }} : {{ whitePlayer?.seconds | number: '2.0' }}</h2>
+              <h2>{{ whitePlayer.minutes | number: '2.0' }} : {{ whitePlayer.seconds | number: '2.0' }}</h2>
           </div>
           <div (click)="startAndStopClock(false)" class="black-timer">
               <h2>{{ blackPlayer.minutes | number: '2.0' }} : {{ blackPlayer.seconds | number: '2.0' }}</h2>
