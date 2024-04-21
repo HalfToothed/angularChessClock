@@ -1,27 +1,49 @@
-# AngularChessClock
+# Angular Chess Clock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+Welcome to the Angular Chess Clock! This application provides a digital chess clock implemented using Angular. With this tool, you can manage and time chess matches with precision, ensuring fair play and accurate timekeeping during games.
 
-## Development server
+The Application is Deployed on this url [https://halftoothed.github.io/angularChessClock/](https://halftoothed.github.io/angularChessClock/), go check it out !!!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
 
-## Build
+1. Clone the repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+https://github.com/HalfToothed/angularChessClock.git
+```
 
-## Running unit tests
+2. Navigate to the project directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+cd angularChessClock
+```
 
-## Running end-to-end tests
+3. Install dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+```
+4. Serve the application locally:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Usage
+
+1. **Setting Time Controls**: Before starting the game, set the desired time controls using the input fields provided.
+
+2. **Start the Clock**: Once the time controls are set, click the timer of the white player to begin the game and start the clocks for both players.
+
+3. **Pause/Resume**: If needed, you can pause the game at any time by clicking the "Pause" button. Resume the game by clicking "Resume".
+
+4. **Reset the Clock**: To reset the clocks and start a new game, click the "Reset" button.
+
+
+## Contributions
+
+Contributions to the Angular Chess Clock are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the GitHub repository.
