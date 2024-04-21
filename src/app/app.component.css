@@ -1,122 +1,98 @@
-body {
-    background-repeat: no-repeat;
-    background-size: cover;                                                                                 
-    background-color: #5e6cbd;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-  
-  .container {
-    display: flex;
-    flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-    align-items: center;
-    justify-content:space-around;
-    height:98vh;
-  }
-  
-  .set-time-container {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .set-time-container input[type="number"] {
-    padding: 8px;
-    margin: 10px;
-    border: 2px solid #1e3d63;                                                                                                      
-    border-radius: 8px;
-    font-size: 16px;
-    width: 80px;
-    text-align: center;
-  }
-  
-  .set-time-container button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #1e3d63;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .set-time-container button:hover {  
-    background-color: #161c3d;
-  }
-  
-  .timer-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .timer-container div:first-child {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .timer-container div:last-child {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  .timer-container div:first-child h2{
-    rotate: 180deg;
-  }
-  
-  .timer-container div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .timer-container h2 {
-    font-size: 48px;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .reset-container {
-    margin-top: 20px;
-  }
-  
-  .reset-container button {
-    padding: 10px 20px;
-    background-color: #1e3d63;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .reset-container button:hover {
-    background-color: #161c3d;
-  }
-  
-  
-  @media (max-width: 700px) {
-    
-    .timer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .timer-container div {
-      margin-bottom: 20px;
-    }
-  
-    .timer-container h2 {
-      font-size: 36px;
-    }
-  }
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.white-timer {
+  margin-bottom: 20px;
+  padding: 50px 80px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  background-color: #27343a;
+  color: #ffffff;
+  rotate: 180;
+}
+
+.black-timer {
+  margin-bottom: 20px;
+  padding: 50px 80px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 5px solid #000;
+  background-color: #27343a;
+  color: #ffffff;
+}
+
+.reset-container {
+  margin-bottom: 20px;
+}
+
+.reset-container button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #9ea5a8;
+  color: #000;
+}
+
+.set-time-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.set-time-container input[type="number"] {
+  padding: 8px;
+  margin: 10px;
+  border: 2px solid #9ea5a8;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 80px;
+  text-align: center;
+}
+
+.set-time-container button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #9ea5a8;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.pause-timer {
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff0022;
+  color: #ffffff;
+}
+
+.active-color {
+  background-color: #13b819;
+}
+
+.white-timer h2 {
+  rotate: 180deg;
+}
+
+.setTime-display {
+  display: none;
+}

@@ -15,6 +15,7 @@ class Player {
 export class AppComponent {
   totalTime: number = 0;
   isGameStarted = false;
+  isPaused = false;
 
   whitePlayer: Player = {
     minutes: 0,
@@ -35,7 +36,6 @@ export class AppComponent {
   };
 
   startAndStopClock(isWhite: boolean) {
-    debugger
     if (!this.isGameStarted && !isWhite) {
       return;
     } else {
@@ -49,20 +49,25 @@ export class AppComponent {
       if (!player.isRunning) {
         player.isRunning = true;
         player.timer = setInterval(() => {
-          if (player.minutes >= 0) {
-            if (player.seconds > 0) {
-              player.seconds = player.seconds - 1;
-            }
-            else {
-              if (player.minutes == 0) {
-                clearInterval(player.timer);
-              }
-              else {
-                player.minutes = player.minutes - 1;
-                player.seconds = 59;
-              }
-            }
+          
+          if(!this.isPaused)
+          {
+			if (player.minutes >= 0) {
+				if (player.seconds > 0) {
+				  player.seconds = player.seconds - 1;
+				}
+				else {
+				  if (player.minutes == 0) {
+					clearInterval(player.timer);
+				  }
+				  else {
+					player.minutes = player.minutes - 1;
+					player.seconds = 59;
+				  }
+				}
+			  }
           }
+          
         }, 1000)
       } else {
         player.isRunning = false;
@@ -73,10 +78,14 @@ export class AppComponent {
   }
 
   reset() {
-    this.totalTime = 0;
-    this.resetPlayer(this.whitePlayer);
-    this.resetPlayer(this.blackPlayer);
-    this.isGameStarted = false;
+	let reset = window.confirm("Are you sure !");
+	if(reset){
+		this.totalTime = 0;
+    	this.resetPlayer(this.whitePlayer);
+    	this.resetPlayer(this.blackPlayer);
+    	this.isGameStarted = false;
+		this.isPaused = false;
+	}
   }
 
   resetPlayer(player: Player) {
@@ -85,4 +94,10 @@ export class AppComponent {
     player.isRunning = false;
     clearInterval(player.timer);
   }
+
+  pauseClock()
+  {
+    this.isPaused = this.isPaused ? false: true;
+  }
+
 }

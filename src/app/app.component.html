@@ -1,19 +1,20 @@
-<body>
+
   <div class="container">
-      <div class="set-time-container">
-          <input type="number" placeholder="Min" #Input>
+      <div class="set-time-container" [ngClass]="{'setTime-display': isGameStarted}">
+          <input type="number" placeholder="Minutes" #Input>
           <button (click)="setTotalTime(Input.value)">Set Time</button>
       </div>
+      <button class="pause-timer" [ngClass]="{'setTime-display': !isGameStarted}" (click)="pauseClock()">{{isPaused ? "Resume": "Pause"}}</button>
       <div class="timer-container">
-          <div (click)="startAndStopClock(true)" class="white-timer">
+          <button (click)="startAndStopClock(true)" class="white-timer" [ngClass]="{'active-color': whitePlayer.isRunning}" >
               <h2>{{ whitePlayer.minutes | number: '2.0' }} : {{ whitePlayer.seconds | number: '2.0' }}</h2>
-          </div>
-          <div (click)="startAndStopClock(false)" class="black-timer">
+          </button>
+         
+          <button (click)="startAndStopClock(false)" class="black-timer" [ngClass]="{'active-color': blackPlayer.isRunning}">
               <h2>{{ blackPlayer.minutes | number: '2.0' }} : {{ blackPlayer.seconds | number: '2.0' }}</h2>
-          </div>
+          </button>
       </div>
       <div class="reset-container">
           <button (click)="reset()">Reset</button>
       </div>
   </div>
-</body>
