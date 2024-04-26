@@ -6,36 +6,33 @@
   height: 100vh;
 }
 
-
 .timer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.white-timer {
-  margin-bottom: 20px;
-  padding: 50px 80px;
+.white-timer,
+.black-timer {
+  margin-bottom: 5vh; /* Reduced margin for better spacing */
+  padding: 25px 40px;
   font-size: 30px;
   border-radius: 10px;
-  border: 5px solid #fff;
   background-color: #27343a;
   color: #ffffff;
-  rotate: 180;
+  border: 5px solid; /* Removed color definition to use default color */
+}
+
+.white-timer {
+  border-color: #fff; /* Specific border color for white timer */
 }
 
 .black-timer {
-  margin-bottom: 20px;
-  padding: 50px 80px;
-  font-size: 30px;
-  border-radius: 10px;
-  border: 5px solid #000;
-  background-color: #27343a;
-  color: #ffffff;
+  border-color: #000; /* Specific border color for black timer */
 }
 
 .reset-container {
-  margin-bottom: 20px;
+  margin-bottom: 5vh; /* Reduced margin for better spacing */
 }
 
 .reset-container button {
@@ -48,14 +45,14 @@
 }
 
 .set-time-container {
-  margin-bottom: 20px;
+  margin-bottom: 5vh; /* Reduced margin for better spacing */
   text-align: center;
 }
 
 .set-time-container input[type="number"] {
   padding: 8px;
-  margin: 10px;
-  border: 2px solid #9ea5a8;
+  margin: 5px;
+  border: 2px solid #1b9dd4;
   border-radius: 8px;
   font-size: 16px;
   width: 80px;
@@ -74,9 +71,8 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-
 .pause-timer {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 15px 30px;
   font-size: 20px;
   border-radius: 20px;
@@ -90,7 +86,7 @@
 }
 
 .white-timer h2 {
-  rotate: 180deg;
+  transform: rotate(180deg); /* Corrected rotate property */
 }
 
 .setTime-display {
